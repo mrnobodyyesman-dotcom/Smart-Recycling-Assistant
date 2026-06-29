@@ -1,0 +1,10 @@
+
+
+Plastic: bottle, bag, wrapper, cap, straw, container, cup, lid, plastic, pet
+Paper: paper, newspaper, magazine, cardboard, box, envelope, book, receipt, notebook, carton
+Glass: glass, bottle, jar, wine, beer, broken, mirror, window
+Metal: can, aluminum, tin, foil, metal, steel, iron, key, wire
+Organic: food, banana, apple, peel, leaf, garden, vegetable, fruit, bread, coffee, tea, egg
+Electronics: phone, laptop, battery, charger, cable, computer, tablet, mouse, keyboard, wire, plug
+Hazardous: paint, chemical, oil, battery, bulb, medicine, spray, pesticide
+Textile: shirt, pants, jacket, sock, shoe, cloth, fabric, cotton, towel, curtain
