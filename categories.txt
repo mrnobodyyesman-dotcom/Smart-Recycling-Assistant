@@ -1,5 +1,3 @@
-
-
 Plastic: bottle, bag, wrapper, cap, straw, container, cup, lid, plastic, pet
 Paper: paper, newspaper, magazine, cardboard, box, envelope, book, receipt, notebook, carton
 Glass: glass, bottle, jar, wine, beer, broken, mirror, window
