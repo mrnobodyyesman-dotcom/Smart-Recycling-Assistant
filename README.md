@@ -1,6 +1,8 @@
+# README
+
 # Smart Recycling Assistant
 
-A simple C console program that suggests the correct recycling category for an object we describe.
+A simple C console program that suggests the correct recycling category for an object you describe.
 
 The program reads a list of waste categories and their associated keywords from `categories.txt`, asks the user to type a short description of an object, counts how many keywords from each category appear in that description, and prints the category with the highest match. The query and the suggested category are appended to `log.txt`.
 
@@ -10,7 +12,7 @@ The program reads a list of waste categories and their associated keywords from 
 
 1. Loads categories and keywords from `categories.txt` (one line per category, format: `Name: word1, word2, word3`).
 2. Asks the user to describe an object.
-3. Scores every category by counting how many of its keywords appear inside the user's text.
+3. Scores every category by counting how many of its keywords appear inside the user’s text.
 4. Prints the best-matching category and its score.
 5. Appends a line to `log.txt` with the input and the chosen category.
 
@@ -19,9 +21,11 @@ The program reads a list of waste categories and their associated keywords from 
 ## Project files
 
 | File | Purpose |
-|---|---|
+| --- | --- |
 | `smart_recycling_assistant.c` | The C source code (this is the only file you compile) |
 | `categories.txt` | The knowledge base — categories and their keywords |
+| `log.txt` | Created automatically when the program runs. Stores the history of queries |
+| `README.md` | This file |
 
 ---
 
@@ -29,12 +33,11 @@ The program reads a list of waste categories and their associated keywords from 
 
 You need a C compiler. On Windows, open `cmd`, go to the project folder, and run:
 
-```cmd
-- go to the file directory using 'cd' command
-- then run -> gcc "smart_recycling_assistant.c" -o smart_recycling_assistant
+```bash
+gcc smart_recycling_assistant.c -o smart_recycling_assistant
 ```
 
-note that gcc must be installed and added to the PATH
+Note that `gcc` must be installed and added to your PATH.
 
 ---
 
@@ -42,17 +45,55 @@ note that gcc must be installed and added to the PATH
 
 From the same `cmd` window, run:
 
-```cmd
+```bash
 smart_recycling_assistant.exe
 ```
 
 The program will prompt you:
 
 ```
-Loaded 9 categories.
+Loaded 8 categories.
 Describe an object:
 ```
 
 Type a description of the object (for example `banana peel`) and press **Enter**. The program will print the score for each category, suggest the best one, and exit. Run the program again any time you want to classify another object.
+
+---
+
+## Example session
+
+```
+Loaded 8 categories.
+Describe an object: Banana Peel
+  Plastic    : 0
+  Paper      : 0
+  Glass      : 0
+  Metal      : 0
+  Organic    : 2
+  Electronics: 0
+  Hazardous  : 0
+  Textile    : 0
+
+Suggested category: Organic
+```
+
+After running, `log.txt` will contain a new line:
+
+```
+Input: Banana Peel
+ -> Organic
+```
+
+---
+
+## Input file format
+
+`categories.txt` is a plain text file. Each line has the form:
+
+```
+CategoryName: keyword1, keyword2, keyword3
+```
+
+You can add, remove, or change categories and keywords freely — the program will pick them up the next time it runs, as long as the file is in the same folder as the executable.
 
 ---
